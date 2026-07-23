@@ -6,7 +6,9 @@ class Solution {
         for (int num : nums) {
             if (num == 1) {
                 count++;
-                maxConsecutive = Math.max(maxConsecutive, count);
+                if(maxConsecutive<count){
+                    maxConsecutive=count;
+                }
             } else {
                 count = 0;
             }
